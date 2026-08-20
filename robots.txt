@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://discover.linkilabs.eu/sitemap.xml

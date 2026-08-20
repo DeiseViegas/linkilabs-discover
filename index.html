@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="LinkiLabs Discover creates independent, practical guides to wellbeing retreats and professional experiences across Europe.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="theme-color" content="#173f36">
+  <link rel="canonical" href="https://discover.linkilabs.eu/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="LinkiLabs Discover — Thoughtful experiences, carefully selected">
+  <meta property="og:description" content="Independent guides to wellbeing retreats and professional experiences across Europe.">
+  <meta property="og:url" content="https://discover.linkilabs.eu/">
+  <meta property="og:image" content="https://discover.linkilabs.eu/assets/yoga.jpg">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Newsreader:opsz,wght@6..72,500;6..72,600&display=swap" rel="stylesheet">
+  <title>LinkiLabs Discover — Curated wellbeing experiences</title>
+  <style>
+    :root {
+      --ink: #18302b;
+      --muted: #5d6f69;
+      --forest: #173f36;
+      --forest-2: #245c4e;
+      --sage: #dce8df;
+      --mist: #f5f7f2;
+      --sand: #f2eadf;
+      --coral: #e86d50;
+      --white: #fff;
+      --border: rgba(24,48,43,.13);
+      --shadow: 0 1px 1px rgba(24,48,43,.05), 0 12px 36px rgba(24,48,43,.09);
+      --radius: 26px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--mist);
+      font-family: "DM Sans", system-ui, sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    .skip { position: absolute; left: -999px; top: 8px; z-index: 20; background: var(--white); padding: 10px 16px; border-radius: 10px; }
+    .skip:focus { left: 8px; }
+    .shell { width: min(1160px, calc(100% - 40px)); margin-inline: auto; }
+    header {
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      color: var(--white);
+    }
+    nav { height: 86px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; text-decoration: none; font-weight: 700; letter-spacing: -.3px; }
+    .brand-mark { width: 36px; height: 36px; display: grid; place-items: center; border: 1px solid rgba(255,255,255,.52); border-radius: 50%; }
+    .nav-contact { font-size: 14px; font-weight: 600; text-decoration: none; border: 1px solid rgba(255,255,255,.62); border-radius: 999px; padding: 9px 16px; transition: .2s ease; }
+    .nav-contact:hover, .nav-contact:focus-visible { background: var(--white); color: var(--forest); }
+    .hero {
+      min-height: 720px;
+      position: relative;
+      display: grid;
+      align-items: end;
+      color: var(--white);
+      overflow: hidden;
+      background: var(--forest);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: linear-gradient(90deg, rgba(8,35,29,.84) 0%, rgba(8,35,29,.6) 46%, rgba(8,35,29,.18) 100%), linear-gradient(0deg, rgba(8,35,29,.45), transparent 55%), url("assets/yoga.jpg");
+      background-position: center;
+      background-size: cover;
+      transform: scale(1.01);
+    }
+    .hero-content { position: relative; z-index: 1; max-width: 780px; padding: 180px 0 94px; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; margin: 0 0 22px; font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 30px; height: 1px; background: currentColor; opacity: .75; }
+    h1, h2, h3 { margin-top: 0; }
+    h1 { margin-bottom: 26px; font-family: "Newsreader", Georgia, serif; font-size: clamp(55px, 7.6vw, 96px); font-weight: 500; line-height: .97; letter-spacing: -.035em; text-wrap: balance; }
+    .hero-copy { max-width: 630px; margin: 0; font-size: clamp(18px, 2vw, 22px); line-height: 1.55; color: rgba(255,255,255,.9); }
+    .hero-note { display: flex; gap: 12px; align-items: center; margin-top: 36px; font-size: 14px; color: rgba(255,255,255,.78); }
+    .hero-note span { width: 8px; height: 8px; border-radius: 50%; background: #b9d99e; box-shadow: 0 0 0 5px rgba(185,217,158,.17); }
+    main section { padding: 110px 0; }
+    .intro { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(45px, 8vw, 110px); align-items: start; }
+    .section-label { color: var(--forest-2); font-size: 12px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+    h2 { font-family: "Newsreader", Georgia, serif; font-size: clamp(38px, 5.2vw, 65px); font-weight: 500; line-height: 1.05; letter-spacing: -.025em; text-wrap: balance; }
+    .intro p { margin-top: 5px; font-size: clamp(18px, 2vw, 22px); color: var(--muted); }
+    .principles { margin: 35px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--border); }
+    .principles li { display: grid; grid-template-columns: 36px 1fr; gap: 12px; padding: 17px 0; border-bottom: 1px solid var(--border); font-weight: 600; }
+    .principles b { color: var(--coral); }
+    .features-wrap { background: var(--white); }
+    .feature-head { display: flex; justify-content: space-between; gap: 30px; align-items: end; margin-bottom: 46px; }
+    .feature-head h2 { max-width: 700px; margin-bottom: 0; }
+    .feature-head p { max-width: 310px; margin: 0 0 5px; color: var(--muted); }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+    .card { min-height: 460px; position: relative; overflow: hidden; border-radius: var(--radius); color: var(--white); box-shadow: var(--shadow); }
+    .card img { width: 100%; height: 100%; object-fit: cover; transition: transform .7s ease; }
+    .card:hover img { transform: scale(1.035); }
+    .card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(0deg, rgba(5,28,23,.86), transparent 67%); }
+    .card-content { position: absolute; z-index: 1; left: 0; right: 0; bottom: 0; padding: 28px; }
+    .card-number { display: block; margin-bottom: 9px; font-size: 12px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; color: rgba(255,255,255,.72); }
+    .card h3 { margin-bottom: 7px; font-family: "Newsreader", Georgia, serif; font-size: 30px; font-weight: 500; line-height: 1.1; }
+    .card p { margin: 0; color: rgba(255,255,255,.8); font-size: 14px; }
+    .method { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(50px, 8vw, 100px); align-items: center; }
+    .method-visual { min-height: 480px; position: relative; border-radius: var(--radius); overflow: hidden; background: var(--sage); }
+    .method-visual img { width: 100%; height: 100%; object-fit: cover; position: absolute; }
+    .method-copy h2 { margin-bottom: 24px; }
+    .method-copy > p { color: var(--muted); font-size: 18px; }
+    .checks { display: grid; gap: 15px; margin-top: 28px; }
+    .check { display: grid; grid-template-columns: 26px 1fr; gap: 13px; align-items: start; }
+    .check-icon { width: 24px; height: 24px; display: grid; place-items: center; border-radius: 50%; background: var(--sage); color: var(--forest); font-size: 13px; font-weight: 700; }
+    .coming { padding-top: 0; }
+    .coming-panel { position: relative; overflow: hidden; border-radius: 32px; padding: clamp(42px, 7vw, 78px); color: var(--white); background: var(--forest); }
+    .coming-panel::after { content: ""; position: absolute; width: 420px; height: 420px; right: -170px; top: -190px; border: 1px solid rgba(255,255,255,.18); border-radius: 50%; box-shadow: 0 0 0 55px rgba(255,255,255,.035), 0 0 0 110px rgba(255,255,255,.025); }
+    .coming-panel h2 { position: relative; z-index: 1; max-width: 720px; margin-bottom: 20px; }
+    .coming-panel p { position: relative; z-index: 1; max-width: 620px; margin: 0; color: rgba(255,255,255,.76); font-size: 18px; }
+    .contact-link { position: relative; z-index: 1; display: inline-flex; margin-top: 31px; padding: 14px 21px; border-radius: 10px; text-decoration: none; background: var(--white); color: var(--forest); font-weight: 700; transition: transform .2s ease, box-shadow .2s ease; }
+    .contact-link:hover, .contact-link:focus-visible { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,.18); }
+    footer { padding: 35px 0 44px; border-top: 1px solid var(--border); }
+    .footer-row { display: flex; justify-content: space-between; align-items: center; gap: 30px; color: var(--muted); font-size: 13px; }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 20px; }
+    .footer-links a { text-underline-offset: 3px; }
+    :focus-visible { outline: 3px solid rgba(232,109,80,.55); outline-offset: 3px; }
+    @media (max-width: 850px) {
+      .hero { min-height: 660px; }
+      .hero::before { background-image: linear-gradient(90deg, rgba(8,35,29,.83), rgba(8,35,29,.35)), linear-gradient(0deg, rgba(8,35,29,.58), transparent 65%), url("assets/yoga.jpg"); background-position: 62% center; }
+      .intro, .method { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: 1fr; }
+      .card { min-height: 390px; }
+      .feature-head { display: block; }
+      .feature-head p { max-width: 580px; margin-top: 18px; }
+      .method-visual { min-height: 400px; order: 2; }
+    }
+    @media (max-width: 560px) {
+      .shell { width: min(100% - 28px, 1160px); }
+      nav { height: 72px; }
+      .nav-contact { padding: 8px 12px; }
+      .brand-mark { width: 33px; height: 33px; }
+      .hero { min-height: 640px; }
+      .hero-content { padding: 140px 0 62px; }
+      h1 { font-size: 53px; }
+      main section { padding: 78px 0; }
+      .coming-panel { border-radius: 24px; }
+      .footer-row { align-items: flex-start; flex-direction: column; gap: 14px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LinkiLabs",
+    "url": "https://discover.linkilabs.eu/",
+    "email": "partnerships@linkilabs.com",
+    "description": "Independent editorial curation of wellbeing retreats and professional experiences across Europe."
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <nav class="shell" aria-label="Primary navigation">
+      <a class="brand" href="./" aria-label="LinkiLabs Discover home">
+        <span class="brand-mark" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 18.5C6.2 13.2 8.4 9.1 12 5.5c1.9 2 3.4 4.2 4.5 6.7M8.5 17.2c2.2.1 4.8-.5 7-2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </span>
+        <span>LinkiLabs <strong>Discover</strong></span>
+      </a>
+      <a class="nav-contact" href="mailto:partnerships@linkilabs.com">Partnerships</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-content">
+        <p class="eyebrow">Independent editorial curation</p>
+        <h1 id="hero-title">Thoughtful experiences, carefully selected.</h1>
+        <p class="hero-copy">We are preparing practical, independent guides to wellbeing retreats and professional experiences across Europe.</p>
+        <p class="hero-note"><span aria-hidden="true"></span>First guides now in development</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="shell intro">
+        <div>
+          <p class="section-label">What we are building</p>
+          <h2>Less searching.<br>Better choices.</h2>
+        </div>
+        <div>
+          <p>LinkiLabs Discover is an editorial project designed to help people navigate a crowded world of retreats, learning experiences and specialist events.</p>
+          <ol class="principles">
+            <li><b>01</b><span>Specific guides for real needs, destinations and budgets</span></li>
+            <li><b>02</b><span>Clear criteria, practical details and honest limitations</span></li>
+            <li><b>03</b><span>Recommendations selected for relevance — not quantity</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="features-wrap" aria-labelledby="areas-title">
+      <div class="shell">
+        <div class="feature-head">
+          <h2 id="areas-title">Three areas of discovery</h2>
+          <p>Focused collections that make complex choices easier to understand.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <img src="assets/meditation.jpg" width="1400" height="933" alt="Person meditating outdoors in a calm natural setting">
+            <div class="card-content"><span class="card-number">01 · Restore</span><h3>Mindful retreats</h3><p>Meditation, yoga and restorative wellbeing experiences.</p></div>
+          </article>
+          <article class="card">
+            <img src="assets/movement.jpg" width="1400" height="933" alt="People taking part in a guided movement session">
+            <div class="card-content"><span class="card-number">02 · Move</span><h3>Movement & Pilates</h3><p>Focused escapes for strength, mobility and mindful movement.</p></div>
+          </article>
+          <article class="card">
+            <img src="assets/yoga.jpg" width="1400" height="933" alt="Group wellbeing practice in a bright studio overlooking nature">
+            <div class="card-content"><span class="card-number">03 · Learn</span><h3>Professional wellbeing</h3><p>Selected events for health, wellness and continuous learning.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="method-title">
+      <div class="shell method">
+        <div class="method-visual"><img src="assets/meditation.jpg" width="1400" height="933" loading="lazy" alt="Quiet outdoor setting representing thoughtful research"></div>
+        <div class="method-copy">
+          <p class="section-label">Our approach</p>
+          <h2 id="method-title">Useful before promotional.</h2>
+          <p>Each guide starts with the traveller's question. We organise the options by who they suit, what they include and what should be considered before booking.</p>
+          <div class="checks">
+            <div class="check"><span class="check-icon" aria-hidden="true">✓</span><span>Research from current, publicly available information</span></div>
+            <div class="check"><span class="check-icon" aria-hidden="true">✓</span><span>Selection by fit, format, location and practical value</span></div>
+            <div class="check"><span class="check-icon" aria-hidden="true">✓</span><span>Clear disclosure when a recommendation uses an affiliate link</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="coming" aria-labelledby="coming-title">
+      <div class="shell">
+        <div class="coming-panel">
+          <p class="section-label" style="color:#b9d99e">Launching soon</p>
+          <h2 id="coming-title">Our first European retreat guides are in preparation.</h2>
+          <p>We welcome conversations with trusted platforms, organisers and editorial partners whose experiences fit our selection criteria.</p>
+          <a class="contact-link" href="mailto:partnerships@linkilabs.com?subject=Partnership%20enquiry%20%E2%80%94%20LinkiLabs%20Discover">partnerships@linkilabs.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-row">
+      <span>© 2026 LinkiLabs Discover</span>
+      <div class="footer-links"><a href="privacy.html">Privacy</a><a href="mailto:partnerships@linkilabs.com">Contact</a></div>
+    </div>
+  </footer>
+</body>
+</html>
