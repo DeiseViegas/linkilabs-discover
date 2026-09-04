@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Luz Studio — Peluquería en Almería | Demostración</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#231f20;--muted:#6f6869;--rose:#a8425c;--rose-dark:#843247;--blush:#f8eced;--cream:#fffaf7;--white:#fff;--line:#eadedf;--shadow:0 1px 2px rgba(35,31,32,.04),0 8px 30px rgba(78,39,49,.10);--radius:24px}
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',system-ui,sans-serif;color:var(--ink);background:var(--cream);line-height:1.55;-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none} button{font:inherit}
+    .demo{background:var(--ink);color:#fff;text-align:center;padding:7px 16px;font-size:12px;letter-spacing:.04em}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,250,247,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(234,222,223,.8)}
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-family:'Playfair Display',serif;font-size:24px;font-weight:600}.brand span{color:var(--rose)}
+    .links{display:flex;align-items:center;gap:28px;font-size:14px;font-weight:600}.links a:hover{color:var(--rose)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;border-radius:999px;background:var(--rose);color:white;padding:14px 22px;font-weight:700;cursor:pointer;box-shadow:0 6px 20px rgba(168,66,92,.22);transition:.2s transform,.2s background}.btn:hover{background:var(--rose-dark);transform:translateY(-2px)}
+    .btn.secondary{background:white;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}
+    .menu{display:none;border:0;background:none;font-size:26px;cursor:pointer}
+    .hero{padding:56px 0 72px}.hero-grid{display:grid;grid-template-columns:1.03fr .97fr;align-items:center;gap:54px}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--rose);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:20px}.eyebrow:before{content:'';width:28px;height:1px;background:var(--rose)}
+    h1{font-family:'Playfair Display',serif;font-size:clamp(48px,6vw,82px);line-height:1.01;letter-spacing:-.035em;margin-bottom:24px} h1 em{color:var(--rose);font-weight:600}
+    .lead{font-size:19px;color:var(--muted);max-width:570px;margin-bottom:30px}.actions{display:flex;gap:12px;flex-wrap:wrap}.trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px;color:var(--muted);font-size:13px}.trust span:before{content:'✓';color:var(--rose);font-weight:800;margin-right:7px}
+    .portrait{position:relative;min-height:560px}.portrait img{width:100%;height:560px;object-fit:cover;border-radius:160px 24px 160px 24px;display:block;box-shadow:var(--shadow)}
+    .float-card{position:absolute;left:-32px;bottom:32px;background:#fff;border-radius:20px;padding:18px 20px;box-shadow:var(--shadow);max-width:210px}.stars{color:#b27745;letter-spacing:2px}.float-card strong{display:block;margin:3px 0}.float-card small{color:var(--muted)}
+    section{padding:82px 0}.soft{background:var(--blush)}
+    .section-head{max-width:650px;margin-bottom:36px}.section-head h2{font-family:'Playfair Display',serif;font-size:clamp(34px,4vw,52px);line-height:1.1;margin:8px 0 13px}.section-head p{color:var(--muted);font-size:17px}
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:white;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.2s transform}.card:hover{transform:translateY(-5px)}.card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}.card-body{padding:24px}.card-top{display:flex;justify-content:space-between;gap:12px;align-items:start;margin-bottom:8px}.card h3{font-size:20px}.price{color:var(--rose);font-weight:700;white-space:nowrap}.card p{color:var(--muted);font-size:14px}.select{margin-top:18px;border:0;background:none;color:var(--rose);font-weight:700;cursor:pointer;padding:0}
+    .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:center}.about-collage{position:relative;height:520px}.about-collage img:first-child{position:absolute;left:0;top:0;width:76%;height:84%;object-fit:cover;border-radius:24px}.about-collage img:last-child{position:absolute;right:0;bottom:0;width:47%;height:48%;object-fit:cover;border:8px solid var(--cream);border-radius:24px}.about-copy h2{font-family:'Playfair Display',serif;font-size:clamp(36px,4vw,52px);line-height:1.1;margin-bottom:20px}.about-copy p{color:var(--muted);margin-bottom:18px}.stats{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);margin-top:28px;padding-top:24px}.stat strong{display:block;font-family:'Playfair Display',serif;font-size:31px;color:var(--rose)}.stat small{color:var(--muted)}
+    .cta{padding:88px 0}.cta-box{background:var(--ink);color:white;border-radius:32px;padding:64px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center;overflow:hidden;position:relative}.cta-box:after{content:'';position:absolute;width:320px;height:320px;border:70px solid rgba(168,66,92,.24);border-radius:50%;right:-140px;top:-150px}.cta-box h2{font-family:'Playfair Display',serif;font-size:clamp(34px,4vw,52px);line-height:1.1;margin-bottom:10px}.cta-box p{color:#d8d0d2}.cta-box .btn{position:relative;z-index:1;background:white;color:var(--ink)}
+    footer{padding:30px 0 42px;border-top:1px solid var(--line)}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--muted);font-size:13px}.foot strong{color:var(--ink)}
+    dialog{border:0;border-radius:26px;padding:0;max-width:470px;width:calc(100% - 32px);margin:auto;box-shadow:0 25px 80px rgba(0,0,0,.25)}dialog::backdrop{background:rgba(35,31,32,.58);backdrop-filter:blur(4px)}.modal{padding:32px}.modal h3{font-family:'Playfair Display',serif;font-size:30px;margin-bottom:10px}.modal p{color:var(--muted);margin-bottom:20px}.field{background:var(--blush);border-radius:14px;padding:14px 16px;margin:12px 0}.field small{display:block;color:var(--muted);margin-bottom:2px}.modal-actions{display:flex;gap:10px;margin-top:22px}.close{border:0;background:#eee6e7;color:var(--ink);padding:13px 18px;border-radius:999px;font-weight:700;cursor:pointer}
+    @media(max-width:820px){.links{display:none;position:absolute;top:76px;left:0;right:0;background:var(--cream);padding:24px;flex-direction:column;border-bottom:1px solid var(--line)}.links.open{display:flex}.menu{display:block}.nav-cta{display:none}.hero{padding-top:34px}.hero-grid,.about,.cta-box{grid-template-columns:1fr}.portrait{min-height:430px}.portrait img{height:430px}.float-card{left:12px}.services{grid-template-columns:1fr}.about{gap:35px}.about-collage{height:410px}.cta-box{padding:42px 28px}.cta-box .btn{justify-self:start}}
+    @media(max-width:480px){.wrap{width:min(100% - 28px,1160px)}nav{height:66px}.links{top:66px}h1{font-size:47px}.lead{font-size:17px}.hero{padding-bottom:52px}.portrait{min-height:360px}.portrait img{height:360px;border-radius:100px 20px}.float-card{bottom:14px}.trust{gap:9px;flex-direction:column}section{padding:60px 0}.stats{gap:12px}.stat strong{font-size:25px}.cta{padding:50px 0}.modal-actions{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="demo">DEMOSTRACIÓN CONCEPTUAL · NEGOCIO FICTICIO · NO ES UNA WEB OFICIAL</div>
+  <header><nav class="wrap">
+    <a class="brand" href="#inicio">Luz <span>Studio</span></a>
+    <div class="links" id="links"><a href="#servicios">Servicios</a><a href="#nosotras">El estudio</a><a href="#contacto">Contacto</a></div>
+    <button class="btn nav-cta" onclick="openBooking()">Reservar cita</button>
+    <button class="menu" aria-label="Abrir menú" onclick="document.getElementById('links').classList.toggle('open')">☰</button>
+  </nav></header>
+
+  <main id="inicio">
+    <section class="hero"><div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Peluquería en Almería</div>
+        <h1>Tu cabello,<br><em>tu mejor luz.</em></h1>
+        <p class="lead">Color, corte y tratamientos personalizados para que salgas sintiéndote tú misma, solo que un poco más radiante.</p>
+        <div class="actions"><button class="btn" onclick="openBooking()">Reservar una cita →</button><a class="btn secondary" href="#servicios">Ver servicios</a></div>
+        <div class="trust"><span>Diagnóstico personalizado</span><span>Productos profesionales</span><span>Atención en español y portugués</span></div>
+      </div>
+      <div class="portrait">
+        <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=85" alt="Interior luminoso de un salón de belleza">
+        <div class="float-card"><div class="stars">★★★★★</div><strong>Una experiencia para ti</strong><small>Tiempo, cuidado y resultados que se sienten.</small></div>
+      </div>
+    </div></section>
+
+    <section class="soft" id="servicios"><div class="wrap">
+      <div class="section-head"><div class="eyebrow">Nuestros servicios</div><h2>El cuidado que tu cabello necesita</h2><p>Una carta sencilla, transparente y pensada para reservar sin dudas.</p></div>
+      <div class="services">
+        <article class="card"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=900&q=80" alt="Servicio de corte de cabello"><div class="card-body"><div class="card-top"><h3>Corte & estilo</h3><span class="price">desde 28 €</span></div><p>Asesoramiento, lavado, corte adaptado a tu rostro y acabado.</p><button class="select" onclick="openBooking('Corte & estilo')">Elegir este servicio →</button></div></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1600948836101-f9ffda59d250?auto=format&fit=crop&w=900&q=80" alt="Aplicación profesional de color"><div class="card-body"><div class="card-top"><h3>Color & reflejos</h3><span class="price">desde 45 €</span></div><p>Color natural, cobertura, mechas y técnicas luminosas a medida.</p><button class="select" onclick="openBooking('Color & reflejos')">Elegir este servicio →</button></div></article>
+        <article class="card"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=900&q=80" alt="Cabello cuidado y brillante"><div class="card-body"><div class="card-top"><h3>Tratamiento ritual</h3><span class="price">desde 22 €</span></div><p>Hidratación, reparación y brillo según las necesidades de tu cabello.</p><button class="select" onclick="openBooking('Tratamiento ritual')">Elegir este servicio →</button></div></article>
+      </div>
+    </div></section>
+
+    <section id="nosotras"><div class="wrap about">
+      <div class="about-collage"><img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=1000&q=85" alt="Profesional trabajando en peluquería"><img src="https://images.unsplash.com/photo-1559599101-f09722fb4948?auto=format&fit=crop&w=700&q=85" alt="Herramientas de peluquería"></div>
+      <div class="about-copy"><div class="eyebrow">Cuidado con intención</div><h2>Más que una cita, un momento para ti</h2><p>En Luz Studio escuchamos antes de cortar. Cada servicio empieza con una conversación sobre tu rutina, tus gustos y lo que realmente puedes mantener en casa.</p><p>El objetivo no es cambiar quién eres: es ayudarte a verte y sentirte bien, con un resultado bonito también al día siguiente.</p><div class="stats"><div class="stat"><strong>1:1</strong><small>Atención cercana</small></div><div class="stat"><strong>100%</strong><small>Personalizado</small></div><div class="stat"><strong>Centro</strong><small>Almería</small></div></div></div>
+    </div></section>
+
+    <section class="cta" id="contacto"><div class="wrap"><div class="cta-box"><div><h2>¿Lista para dedicarte este momento?</h2><p>Selecciona tu servicio y solicita un horario. Confirmamos personalmente contigo.</p></div><button class="btn" onclick="openBooking()">Quiero reservar</button></div></div></section>
+  </main>
+
+  <footer><div class="wrap foot"><div><strong>Luz Studio</strong> · Concepto ficticio para demostración</div><div>Almería · Horarios y datos por confirmar</div><div>© 2026 · No recoge datos reales</div></div></footer>
+
+  <dialog id="booking"><div class="modal"><div class="eyebrow">Solicitud de cita</div><h3>Tu próximo momento empieza aquí</h3><p>Así funcionaría el flujo de reserva en la página definitiva.</p><div class="field"><small>Servicio seleccionado</small><strong id="chosen">Por decidir</strong></div><div class="field"><small>Siguiente paso</small><strong>Elegir día y recibir confirmación</strong></div><div class="modal-actions"><button class="btn" onclick="demoDone()">Simular solicitud</button><button class="close" onclick="document.getElementById('booking').close()">Cerrar</button></div></div></dialog>
+  <script>
+    function openBooking(service='Por decidir'){document.getElementById('chosen').textContent=service;document.getElementById('booking').showModal()}
+    function demoDone(){document.querySelector('.modal').innerHTML='<div class="eyebrow">Demostración</div><h3>¡Solicitud preparada!</h3><p>En una web real, la clienta podría continuar por WhatsApp o por una agenda conectada. Aquí no se ha enviado ni recogido ningún dato.</p><button class="btn" onclick="location.reload()">Volver a la muestra</button>'}
+    document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>document.getElementById('links').classList.remove('open')))
+  </script>
+</body>
+</html>
